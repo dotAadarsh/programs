@@ -3,7 +3,7 @@
 public class While {
     public static void main(String[] args) {
         int gas = 7;
-        while(gas<10) {
+        while(gas<10) { 
             System.out.println("Not empty");
             gas++;
         }
