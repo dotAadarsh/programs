@@ -1,7 +1,5 @@
 //Operators are used to perform operations on variables and values.
 
-
-
 public class Operators {
     public static void main(String[] args) {
         

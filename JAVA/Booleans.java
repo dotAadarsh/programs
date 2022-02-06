@@ -13,10 +13,5 @@ public class Booleans {
         System.out.println(CID2>CID1);
         System.out.println(CID1 == 7);
 
-
-
-
-
-
     }
 }
