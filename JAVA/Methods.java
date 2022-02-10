@@ -1,13 +1,22 @@
 //A method is a block of code which only runs when it is called.
 
 public class Methods {
-    static void myMethod() {
-        System.out.println("It's called");
+
+    static void StaticMethod() {
+        System.out.println("Static methods can be called without creating objects");
+    }
+
+    public void PublicMethod() {
+        System.out.println("Public must be called by creating objects");
     }
 
     public static void main(String[] args) {
-        myMethod();
+        StaticMethod();
         //you can call it multiple times
-        myMethod();
+        StaticMethod();
+
+        Methods myobj = new Methods();
+        myobj.PublicMethod();
+
     }
 }
