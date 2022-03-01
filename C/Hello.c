@@ -1,7 +1,14 @@
 #include<stdio.h>
-int main()
+
+//// For the function to betotally complete it needs to return an int and take two parameters: anint for the argument count and an array of char * strings for the arguments.
+
+int main(int argc, char *argv[])
 {
-	//printf() displays the string inside quotation
-	printf("Hello World!");
-	return 0;
+  /* This is a comment */
+  printf("Hello, World!");
+
+  // this is also comment
+
+  return 0;
+  
 }
