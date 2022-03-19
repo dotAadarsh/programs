@@ -5,7 +5,7 @@ There are several approaches to handling this problem, but probably the simplest
 
 #include<stdio.h>
 
-int main(int argc, char *argv) {
+int main (int argc, char *argv[]) {
   char string[256];
   printf("enter the string: ");
   
@@ -25,4 +25,6 @@ int main(int argc, char *argv) {
 
   
   getchar();
+  return 0;
+
 }
