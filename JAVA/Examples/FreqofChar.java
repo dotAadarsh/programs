@@ -1,5 +1,4 @@
 // To find the frequency of characters
-
 package Examples;
 
 public class FreqofChar {
