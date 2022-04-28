@@ -1,0 +1,8 @@
+tasks:
+  - name: Start web browser
+    init: python -m http.server 8000
+
+ports:
+  - port: 8000
+    visibility: private
+    onOpen: open-browser
