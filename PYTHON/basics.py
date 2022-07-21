@@ -302,3 +302,252 @@ print(x)
 txt = "Hello, welcome to my world."
 print(txt.find("q"))
 # print(txt.index("q")) raises exception
+
+txt = "Album sold for {price:.2f} dollars"
+x = txt.format(price = 20) # The format() method formats the specified value(s) and insert them inside the string's placeholder
+print(x)
+
+# some format method types
+txt = "World's population is {:_} and increasing" # Use a underscore as a thousand separator
+print(txt.format(1408374094)) 
+
+txt = "The Temperature is between {:+} and {:+}" # Use "+" to always indicate if the number is positive or negative
+print(txt.format(-3,7)) 
+
+# More on - https://www.w3schools.com/python/ref_string_format.asp
+
+txt = "Cause there's magic in my bones"
+print(txt.index("magic")) # index() method finds the first occurrence of the specified value
+
+txt = "Pickingthepiecesupandbuildingtothesky123456"
+print(txt.isalnum()) # Check if all the characters in the text are alphanumeric
+
+txt = "zeronite"
+print(txt.isalpha()) # Check if all the characters in the text are letters
+
+txt = "\u0033"
+print(txt.isdecimal()) # Check if all the characters in the unicode object are decimals
+
+txt = "12345"
+print(txt.isdigit()) # Check if all the characters in the text are digits
+
+txt = "DemoText"
+print(txt.isidentifier()) # isidentifier() method returns True if the string is a valid identifier, otherwise False
+
+txt = "2two"
+print(txt.isidentifier())
+
+txt = "when i was your man"
+print(txt.islower()) # Check if all the characters in the text are in lower case
+
+txt = "hello 123"
+print(txt.islower())
+
+txt = "2134345"
+print(txt.isnumeric()) # Check if all the characters in the text are numeric
+
+txt = "234.234"
+print(txt.isnumeric()) # Returns False
+
+txt = "Hello there!"
+print(txt.isprintable()) # Check if all the characters in the text are printable
+
+txt = "Hello \n there !"
+print(txt.isprintable()) # Returns False
+
+txt = "        "
+print(txt.isspace()) # Check if all the characters in the text are whitespaces
+
+txt = "  p  "
+print(txt.isspace()) # Returns False
+
+txt = "I Walk Through The Valley Of The Shadow Of Death"
+print(txt.istitle()) # Check if each word start with an upper case letter
+
+txt = "I Walk Through the valley of the shadow of death"
+print(txt.istitle()) # Returns False
+
+txt = "HELLO, AND WELCOME TO MY WORLD"
+print(txt.istitle()) # Returns False
+
+txt = "This Is %'!?"
+print(txt.istitle()) # Returns True
+
+txt = "HELLO, AND WELCOME TO MY WORLD"
+print(txt.isupper()) # Check if all the characters in the text are in upper case
+
+myTuple = ("John", "Wick", "Boogeyman")
+print("|".join(myTuple)) # Join all items in a tuple into a string  
+
+myDict = {"name": "john", "country": "Italy"}
+mySeparator = "FROM"
+print(mySeparator.join(myDict)) # Join all items in a dictionary into a string
+
+txt = "Girl, you know I want your love"
+print(txt.split()) # Split a string into a list where each word is a list item
+
+txt = "   love   "
+print(txt.strip()) # Remove spaces at the beginning and at the end of the string
+
+txt = ",,,...love...zzz,,,"
+print(txt.strip(".,z")) # Remove the leading and trailing characters
+
+print(10 > 11)
+print(11==11)
+print(10 < 11)
+print(bool("hello"))
+print(bool(99))
+
+# Print a message based on whether the condition is True or False
+a = 3
+b = 5
+if a > b:
+    print("a is greater than b")
+else:
+    print("b is greater than a")
+
+# The following will return False
+print(bool(False))
+print(bool(None))
+print(bool(0))
+print(bool(""))
+print(bool(()))
+print(bool([]))
+print(bool({}))
+
+# Functions can Return a Boolean
+def boolfn():
+    return True
+
+print(boolfn())
+
+# Operators are used to perform operations on variables and values
+
+# Arithmetic Operators
+print(5+5) # Addition
+print(3-2) # Subtraction
+print(2*7) # Multiplication
+print(8/2) # Division
+print(7%3) # Modulus
+print(3**3) # Exponentiation
+print(15//2) # Floor division
+
+# Assignment Operators
+x = 5 # Same as X = 5
+print(x)
+
+x += 3 # Same as x = x + 3
+print(x)
+
+x -= 4 # Same as x = x - 4
+print(x)
+
+x *= 2 # Same as x = x * 2
+print(x)
+
+x /= 8 # Same as x = x / 8
+print(x)
+
+x = 55
+x %= 7 # Same as x = x % 7
+print(x)
+
+x = 77
+x //= 4 # Same as x = x // 4
+print(x)
+
+x **= 2
+print(x) # Same as x = x ** 2
+
+x = 5
+x |= 3
+print(x) # Same as x = x | 3
+
+x ^= 2
+print(x) # Same as x = x ^ 2
+
+x >>= 4
+print(x) # Same as x = x >> 4
+
+x = 5
+x <<= 3 # Same as x = x << 3
+print(x) 
+
+# Comparison Operators
+x = 6
+y = 5
+print(x == y) # Equal
+print(x != y) # Not equal
+print(x > y) # Greater than
+print(x < y) # Less than
+print(x >= y) # Greater than or equal to
+print(x <= y) # Less than or equal to
+
+# Logical Operators
+x = 5
+print(x > 3 and x < 10) # Returns True if both statements are true
+print(x > 3 or x < 10) # Returns True if one of the statements is true
+print(not(x > 3 and x < 10)) # Reverse the result, returns False if the result is true
+
+# Identity Operators
+x = ["Juice", "Wrld"]
+y = ["Juice", "Wrld"]
+z = x
+# Returns True if both variables are the same object
+print(x is z)
+print(x is y)
+print(x == y)
+
+# Returns True if both variables are not the same object	
+print(x is not z)
+print(x is not y)
+print(x != y)
+
+# Membership Operators
+print("Juice" in  x) # Returns True if a sequence with the specified value is present in the object	
+print("Wrld" not in y) # Returns True if a sequence with the specified value is not present in the object
+
+# Bitwise Operators
+print(2^3) # Sets each bit to 1 if only one of two bits is 1
+print(5|4) # Sets each bit to 1 if one of two bits is 1
+print(7^3) # Sets each bit to 1 if only one of two bits is 1
+print(~5) # Inverts all the bits
+print(5>>3) # Shift right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off
+print(7<<3) # Shift left by pushing zeros in from the right and let the leftmost bits fall off
+
+'''
+Lists are used to store multiple items in a single variable
+created using square brackets
+'''
+
+albums = ["Dawn FM", "Death bed", "lovely"]
+print(albums) # Print list
+print(len(albums)) # Print the number of items in the list
+
+# List items can be of any data type
+list1 = ["Dawn FM", "Death bed", "lovely"]
+list2 = [1, 2, 32, 4, 6]
+list3 = [True, False, False, True]
+print(list1, list2, list3)
+
+# A list can contain different data types
+list1 = [23, "twenty three", True, "23"]
+print(list1)
+
+print(type(list1)) # From Python's perspective, lists are defined as objects with the data type 'list'
+
+# list() Constructor - use the list() constructor when creating a new list
+mylist = list(("Dawn FM", "Death bed", "lovely"))
+print(mylist)
+
+print(mylist[1]) # Access items in the list
+print(mylist[-1]) # Negative Indexing
+
+albums = ['Therapy session', 'Perception', 'The Search', 'Clouds', 'Chasing...']
+print(albums[2:5]) # Range of Indexes
+
+# Check if Item Exists
+if "Clouds" in albums:
+    print("Yes, album is present")
+
+    
