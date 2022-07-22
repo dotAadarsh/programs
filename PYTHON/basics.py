@@ -550,4 +550,82 @@ print(albums[2:5]) # Range of Indexes
 if "Clouds" in albums:
     print("Yes, album is present")
 
-    
+# Change item Value
+albums = ['Therapy session', 'Perception', 'The Search', 'Clouds', 'Chasing...']
+albums[1] = "Death bed"
+print(albums)
+
+# Change a Range of Item Values
+albums = ['Therapy session', 'Perception', 'The Search', 'Clouds', 'Chasing...']
+albums[1:3] = ["Folklore", "Divide"]
+print(albums)
+
+# If you insert more items than you replace, the new items will be inserted where you specified, and the remaining items will move accordingly
+albums = ['Therapy session', 'Perception', 'The Search', 'Clouds', 'Chasing...']
+albums[1:3] = ["Folklore", "Divide", "Handwritten notes"]
+print(albums)
+
+# insert() method inserts an item at the specified index
+albums = ['Therapy session', 'Perception', 'The Search', 'Clouds', 'Chasing...']
+albums.insert(2, "Starboy")
+print(albums)
+
+# To add an item to the end of the list, use the append() method
+albums = ['Therapy session', 'Perception', 'The Search', 'Clouds', 'Chasing...']
+albums.append("Ticket to my downfall")
+print(albums)
+
+# To append elements from another list to the current list, use the extend() method
+albums1 = ['Therapy session', 'Perception']
+albums2 = ['The Search', 'Clouds', 'Chasing...']
+albums1.extend(albums2)
+print(albums1)
+
+# The extend() method does not have to append lists, you can add any iterable object (tuples, sets, dictionaries etc.)
+albums1 = ['Therapy session', 'Perception']
+albums2 = ('The Search', 'Clouds', 'Chasing...') # Tuple
+albums1.extend(albums2) # Add elements of a tuple to a list
+print(albums1)
+
+# The remove() method removes the specified item
+albums = ['Therapy session', 'Perception', 'The Search', 'Clouds', 'Chasing...']
+albums.remove("Clouds")
+print(albums)
+
+# The pop() method removes the specified index.
+albums = ['Therapy session', 'Perception', 'The Search', 'Clouds', 'Chasing...']
+albums.pop(2)
+print(albums)
+
+# If you do not specify the index, the pop() method removes the last item
+albums = ['Therapy session', 'Perception', 'The Search', 'Clouds', 'Chasing...']
+albums.pop()
+print(albums) 
+
+# The del keyword also removes the specified index
+albums = ['Therapy session', 'Perception', 'The Search', 'Clouds', 'Chasing...']
+del albums[3]
+print(albums)
+
+# The del keyword can also delete the list completely
+albums = ['Therapy session', 'Perception', 'The Search', 'Clouds', 'Chasing...']
+del albums
+
+# The clear() method empties the list. The list still remains, but it has no content
+albums = ['Therapy session', 'Perception', 'The Search', 'Clouds', 'Chasing...']
+albums.clear()
+print(albums)
+
+# loop through the list items by using a for loop
+albums = ['Therapy session', 'Perception', 'The Search', 'Clouds', 'Chasing...']
+for x in albums:
+    print(x)
+
+# Loop Through the Index Numbers
+albums = ['Mainstream sellout', 'Hotel Diablo', 'Ticket to my downfall']
+for i in range(len(albums)):
+    print(i)
+
+# List Comprehension offers the shortest syntax for looping through list
+albums = ['Mainstream sellout', 'Hotel Diablo', 'Ticket to my downfall']
+[print(x) for x in albums]
