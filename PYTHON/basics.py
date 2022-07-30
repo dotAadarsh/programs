@@ -629,3 +629,108 @@ for i in range(len(albums)):
 # List Comprehension offers the shortest syntax for looping through list
 albums = ['Mainstream sellout', 'Hotel Diablo', 'Ticket to my downfall']
 [print(x) for x in albums]
+
+albums = ['Mainstream sellout', 'Hotel Diablo', 'Ticket to my downfall']
+newlist = []
+for x in albums:
+    if "H" in x:
+        newlist.append(x)
+
+print(newlist)
+
+albums = ['Mainstream sellout', 'Hotel Diablo', 'Ticket to my downfall']
+newlist = [ x for x in albums if "M" in x] # With list comprehension
+print(newlist)      
+
+# Sort List Alphanumerically
+colors = ['Green', 'Yellow', 'Blue', 'Black', 'Brown']
+colors.sort() # ascending, by default
+print(colors)
+
+colors = ['Green', 'Yellow', 'Blue', 'Black', 'Brown']
+colors.sort(reverse=True) # Sort Descending
+print(colors)
+
+# Customize Sort Function
+def myfunc(n):
+    return abs(n-10)
+
+nums = [43, 56, 77, 8678, 454]
+nums.sort(key = myfunc)
+print(nums)
+
+# case-insensitive sort function
+colors = ['Green', 'Yellow', 'Blue', 'black', 'brown']
+colors.sort(key=str.lower)
+print(colors)
+
+# Reverse Order
+colors = ['Green', 'Yellow', 'Blue', 'black', 'brown']
+colors.reverse()
+print(colors)
+
+# Copy a List
+colors = ['Green', 'Yellow', 'Blue', 'black', 'brown']
+mylist = colors.copy()
+print(mylist)
+
+# Another way to make a copy is to use the built-in method list()
+colors = ['Green', 'Yellow', 'Blue', 'black', 'brown']
+mylist = list(colors)
+print(mylist)
+
+# Join Two Lists
+
+list1 = [1, 2, 3, 4]
+list2 = ['a', 'b', 'c', 'd']
+list3 = list1 + list2
+print(list3)
+
+#  join two lists is by appending all the items
+list1 = [1, 2, 3, 4]
+list2 = ['a', 'b', 'c', 'd']
+for x in list2:
+    list1.append(x)
+print(list1)
+
+# using extend() method
+list1 = [1, 2, 3, 4]
+list2 = ['a', 'b', 'c', 'd']
+list1.extend(list2)
+print(list1)
+
+# TUPLE -  used to store multiple items in a single variable #
+exampleTuple = ("GitHub", "Stackoverflow", "Dev.to")
+print(exampleTuple)
+
+# Tuple items are ordered, unchangeable, and allow duplicate values
+
+# Tuples allow duplicate values
+exampleTuple = ("GitHub", "Stackoverflow", "Dev.to", "GitHub")
+print(exampleTuple)
+
+# To determine how many items a tuple has, use the len() function
+exampleTuple = ("GitHub", "Stackoverflow", "Dev.to", "Medium")
+print(len(exampleTuple))
+
+# To create a tuple with only one item, you have to add a comma after the item, otherwise Python will not recognize it as a tuple.
+exampleTuple = ("GitHub",)
+print(type(exampleTuple))
+
+exampleTuple = ("GitHub")
+print(exampleTuple)
+
+# The tuple() Constructor
+exampleTuple = tuple(("GitHub", "Stackoverflow", "Dev.to", "Medium"))
+print(exampleTuple)
+
+# Access Tuple Items
+exampleTuple = ("GitHub", "Stackoverflow", "Dev.to", "Medium")
+print(exampleTuple[2])
+print(exampleTuple[-2]) # Negative Indexing
+print(exampleTuple[1:3]) # Range of Indexes
+
+# Check if Item Exists
+exampleTuple = ("GitHub", "Stackoverflow", "Dev.to", "Medium")
+if "Medium" in exampleTuple:
+    print("Medium exist in the tuple")
