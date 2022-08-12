@@ -734,3 +734,694 @@ print(exampleTuple[1:3]) # Range of Indexes
 exampleTuple = ("GitHub", "Stackoverflow", "Dev.to", "Medium")
 if "Medium" in exampleTuple:
     print("Medium exist in the tuple")
+
+thisSet = {"Twitch, Twitter", "Telegram"} # Sets are used to store multiple items in a single variable.
+print(thisSet)
+
+# Set items are unordered, unchangeable, and do not allow duplicate values.
+
+print(len(thisSet)) # Len of set
+
+# Set can be of any data type and can contain different data types
+set1 = {"python", "is", "awesome"}
+set2 = {1, 2, 3, 4, 5}
+set3 = {True, False, True}
+set4 = {"abc", 123, True, "def"}
+
+print(set1, set2, set3, set4)
+
+print(type(set4)) # sets are defined as objects with the data type 'set'
+
+# Dictionaries are used to store data values in key:value pairs.
+
+# Python Conditions and If statements
+
+a = 12
+b = 232
+if b>a:
+    print("b is greater than a")
+
+
+a = 5
+b = 5
+if b>a:
+    print("b is greater than a")
+elif a==b:
+    print("a and b are equal")
+
+
+a = 55
+b = 5
+if b>a:
+    print("b is greater than a")
+elif a==b:
+    print("a and b are equal")
+else:
+    print("a is greater than b")
+
+# Short Hand If
+a = 4
+b = 12
+print("A") if a>b else print("B")
+
+# and
+a = 200
+b = 33
+c = 898
+if a>b and c>b:
+    print("Both conditions are True")
+
+a = 200
+b = 23
+c = 3
+if a>b or c>a:
+    print("At least one of the condition is true")
+
+# Nestedn if 
+x = 40
+if x>10:
+    print("Above 10")
+    if x>30:
+        print("Above 30")
+    else:
+        print("Below 30")
+
+# The pass statement - if statements cannot be empty, but if you for some reason have an if statement with no content, put in the pass statement to avoid getting an error.
+
+a = 45
+b = 55
+if b>a:
+    pass 
+
+# The while loop
+
+i = 1
+while i < 6:
+    print(i)
+    i += 1
+
+# The break Statement
+i = 1
+while i<6:
+    print(i)
+    if i == 3:
+        break
+    i += 1
+
+# The continue Statement
+i = 0
+while i<6:
+    i += 1
+    if i == 3:
+        continue
+    print(i)
+
+# for loops
+
+media = ["Twitter", "Telegram", "Twitch"]
+for x in media:
+    print(x)
+
+# looping through string
+
+for x in "Gitpod":
+    print(x)
+
+# The range function
+for x in range(6):
+    print(x)
+
+for x in range(20, 25):
+    print(x)
+
+for x in range(90, 100, 2):
+    print(x)
+
+adj = ["red", "big", "tasty"]
+fruits = ["apple", "banana", "cherry"]
+
+for x in adj:
+    for y in fruits:
+        print(x, y)
+
+# creating a function
+
+# A function is a block of code which only runs when it is called.
+
+def my_function():
+    print("Hello from function")
+
+my_function() 
+
+# Information can be passed into functions as arguments.
+
+def greeting(fname):
+    print("Hello " + fname)
+
+greeting("MADMAX")
+
+# If you do not know how many arguments that will be passed into your function, add a * before the parameter name in the function definition.
+
+def myFunction(*kids):
+    print("The youngest child is " + kids[2])
+
+myFunction("Hannah", "Baker", "Mark" ) 
+
+# Keyword arguments
+def my_function(child3, child2, child1):
+    print("The youngest child is "+ child3)
+
+my_function(child1 = "Emily",child2 = "Hannah", child3 = "Baker")
+
+# Arbitrary Keyword Arguments, **kwargs
+
+def my_function(**kid):
+    print("the last name is " + kid["lname"])
+
+my_function(fname = "Hannah", lname = "Baker")
+
+# Passing a List as an Argument
+
+def beverage(name):
+    for x in name:
+        print(x)
+
+drinks = ["Coffee", "Tea", "Milk", "Beer"]
+beverage(drinks)
+
+# Return values
+
+def my_function(x):
+    return 5 * x
+
+print(my_function(3))
+print(my_function(9))
+print(my_function(15))
+
+# Recursion
+def tri_recursion(k):
+    if(k>0):
+        result = k + tri_recursion(k-1)
+    else:
+        result = 0
+    return result
+
+print(tri_recursion(6))
+
+# Lambda - A lambda function is a small anonymous function.
+
+x = lambda a : a + 20
+print(x(5))
+
+# Lambda functions can take any number of arguments
+x = lambda a,b : a*b
+print(x(4, 5))
+
+def myfun(n):
+    return lambda a: a*n
+
+mydoubler = myfun(2)
+mytripler = myfun(3)
+print(mydoubler(2))
+print(mytripler(3))
+
+# Classes and Objects
+class MyClass:
+    x = 1234
+
+p1 = MyClass() 
+print(p1.x) 
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+p1 = Person("John", 32)
+
+print(p1.name)
+print(p1.age)
+
+# Object Methods
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def myfunc(self):
+        print("Hello my name is "+ self.name)
+
+p1 = Person("Eminem", 49)
+p1.myfunc()
+
+# The self parameter is a reference to the current instance of the class, 
+# and is used to access variables that belongs to the class
+
+# Modify Object Properties
+p1.age = 50
+print(p1.name, p1.age)
+
+# Delete Object Properties
+del p1.age
+
+# Inheritance
+# Parent class is the class being inherited from, also called base class.
+# Child class is the class that inherits from another class, also called derived class.
+
+# Create a parent class
+
+class Person:
+    def __init__(self, fname, lname):
+        self.firstname = fname
+        self.lastname = lname
+
+    def printname(self):
+        print(self.firstname, self.lastname)
+
+x = Person("Aadarsh", "Kannan")
+x.printname()
+
+# Create a Child Class
+
+class Person:
+    def __init__(self, fname, lname):
+        self.firstname = fname
+        self.lastname = lname
+
+    def printname(self):
+        print(self.firstname, self.lastname)
+
+class Student(Person):
+    pass
+
+x = Student("Aadarsh", "Kannan")
+x.printname()
+
+# Add the __init__() Function
+class Person:
+    def __init__(self, fname, lname):
+        self.firstname = fname
+        self.lastname = lname
+
+    def printname(self):
+        print(self.firstname, self.lastname)
+
+class Student(Person):
+    def __init__(self, fname, lname): 
+        
+        '''# When you add the __init__() function, 
+        the child class will no longer inherit the parent's __init__() function
+        To keep the inheritance of the parent's __init__() function, 
+        add a call to the parent's __init__() function:
+        '''
+        Person.__init__(self, fname, lname)
+
+x = Student("Mad", "MAX")
+x.printname()
+
+class Person:
+    def __init__(self, fname, lname):
+        self.firstname = fname
+        self.lastname = lname
+
+    def printname(self):
+        print(self.firstname, self.lastname)
+
+class Student(Person):
+    def __init__(self, fname, lname): 
+        
+        '''Python also has a super() function that will make the child class 
+        inherit all the methods and properties from its parent
+        '''
+        super().__init__(fname, lname)
+
+x = Student("Altered", "Carbon")
+x.printname()
+
+# Add Properties
+
+class Person:
+    def __init__(self, fname, lname):
+        self.firstname = fname
+        self.lastname = lname
+
+    def printname(self):
+        print(self.firstname, self.lastname)
+
+class Student(Person):
+    def __init__(self, fname, lname, year):
+        super().__init__(fname, lname)
+        self.graduationyear = year
+
+x = Student("Aadarsh", "Kannan", "2023")
+print(x.graduationyear)
+
+# Add Methods
+
+class Person:
+    def __init__(self, fname, lname):
+        self.firstname = fname
+        self.lastname = lname
+
+    def printname(self):
+        print(self.firstname, self.lastname)
+
+class Student(Person):
+    
+    def __init__(self, fname, lname, year): 
+        super().__init__(fname, lname)
+        self.graduationyear = year
+
+    def welcome(self):
+        print("Welcome ", self.firstname, self.lastname, "to the class of ", self.graduationyear)
+
+x = Student("Aadarsh", "Kannan", "2023")
+x.welcome()
+
+# Iterators - s an object which implements the iterator protocol, which consist of the methods __iter__() and __next__().
+
+# Return an iterator from a tuple, and print each value:
+mytuple = ("favourite crime", "Drivers license", "Happier")
+myit = iter(mytuple)
+print(next(myit))
+print(next(myit))
+print(next(myit))
+
+# Even strings are iterable objects, and can return an iterator
+mystr = "Golden"
+myit = iter(mystr)
+
+print(next(myit))
+print(next(myit))
+print(next(myit))
+
+# Create an Iterator
+class MyNumbers:
+  def __iter__(self):
+    self.a = 1
+    return self
+
+  def __next__(self):
+    x = self.a
+    self.a += 1
+    return x
+
+myclass = MyNumbers()
+myiter = iter(myclass)
+
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+
+# The example above would continue forever if you had enough next() statements, 
+# or if it was used in a for loop.
+
+# To prevent the iteration to go on forever, 
+# we can use the StopIteration statement.
+
+class MyNumbers:
+    def __iter__(self):
+        self.a = 1
+        return self
+    
+    def __next__(self):
+        if self.a <=10:
+            x = self.a 
+            self.a += 1
+            return x
+        else:
+            raise StopIteration
+
+myclass = MyNumbers()
+myiter = iter(myclass)
+
+for x in myiter:
+    print(x)
+
+# Local Scope
+
+def myfunc():
+    x = 100
+    print(x)
+
+myfunc()
+
+# Function Inside Function
+def myfunc():
+    x = 100
+    def myinnerfunc():
+        print(x)
+    myinnerfunc()
+myfunc()
+
+# Global scope
+x = 69
+def myfun():
+    print(x)
+myfun()
+print(x)
+
+# If you operate with the same variable name inside and outside of a function, 
+# Python will treat them as two separate variables
+
+x = 81
+def fun():
+    x = 11
+    print(x)
+fun()
+print(x)
+
+# Global Keyword - makes the variable globa
+def myfun():
+    global x
+    x = 90
+myfun()
+print(x)
+
+# To change the value of a global variable inside a function, refer to the variable by using the global keyword
+x = 30
+def globalfun():
+    global x
+    x = 20
+
+globalfun()
+print(x)
+
+# Module
+# Built-in-Modules
+import platform
+x = platform.system()
+print(x)
+
+#  dir() Function - function to list all the function names (or variable names) in a module. The dir() function
+x = dir(platform)
+print(x)
+
+# Dates - date in Python is not a data type of its own, but we can import a module named datetime to work with dates as date objects
+
+import datetime
+x = datetime.datetime.now()
+print(x)
+print(x.year)
+print(x.strftime("%A")) # takes one parameter, format, to specify the format of the returned string
+
+# Math
+x = min(10, 20, 30)
+y = max(100, 123, 221)
+z = abs(-5.123)
+a = pow(2, 3)
+print(x)
+print(y)
+print(z)
+print(a)
+
+import math
+x = math.sqrt(81) # Returns square root
+y = math.ceil(2.4) # rounds a number upwards to its nearest integer
+z = math.floor(2.4) # rounds a number downwards to its nearest integer
+a = math.pi #returns the value of pi
+
+print(x)
+print(y)
+print(z)
+print(a)
+
+#JSON - JavaScript Object Notation
+import json
+
+# Parse JSON - Convert from JSON to Python
+x  = '{ "name":"John", "age":30, "city":"New York"}'
+
+y = json.loads(x)
+print(y["city"])
+
+# Convert from Python to JSON
+
+# a py obj (dict)
+x = {
+    "name": "John",
+    "age" : 30,
+    "city": "New York"
+}
+
+y = json.dumps(x)
+print(y)
+
+# dict, list, tuple, string, int, float, True, False, None - you can convert these py objects to JSON strings
+
+print(json.dumps({"name":"John", "age":30}))
+print(json.dumps(["apple", "bananas"]))
+print(json.dumps(("apple", "bananas")))
+print(json.dumps("hello"))
+print(json.dumps(23))
+print(json.dumps(3.1413))
+print(json.dumps(True))
+print(json.dumps(None))
+
+# When you convert from Python to JSON, Python objects are converted into the JSON (JavaScript) equivalent
+
+x = {
+  "activity": "Color",
+  "type": "relaxation",
+  "participants": 1,
+  "price": 0.1,
+  "link": "",
+  "key": "5322987",
+  "accessibility": 0
+}
+print(json.dumps(x, indent=4, sort_keys=True)) # Order the Result using sort_keys
+
+# RegEx - Regular Expression - used to check if a string contains the specified search pattern
+import re
+txt = "You'll find me alone at midnight"
+x = re.search("midnight$", txt) # search if end with "midnight"
+
+if x:
+    print("Yes! Match found")
+else:
+    print("No match")
+
+txt = "Seasons change and our love went cold"
+x = re.findall("ol", txt) # Return a list containing every occurrence of "ol"
+print(x)
+
+# search() function searches the string for a match, and returns a Match object if there is a match
+txt = "My hands are full, what else should I carry for you?"
+x  = re.search("\s", txt)
+print("The first white-space character is located in position: ", x.start())
+
+# split() function returns a list where the string has been split at each match
+
+x = re.split("\s", txt)
+print(x)
+
+# sub() function replaces the matches with the text of your choice
+
+x = re.sub("\s", "_", txt)
+print(x)
+
+# Replace the first 3 occurrences:
+x = re.sub("\s", "_", txt, 3)
+print(x)
+
+# Match object 
+txt = "I know that dress is karma, perfume regret"
+x = re.search("re", txt)
+print(x)
+
+# Try Except
+'''
+try - let you test a block of code for error
+except - let you handle the error
+else - lets you execute code when there is no error
+finally - lets you execute code, regardless of the result of try- and except blocks
+'''
+# Exception handling
+
+try:
+    print(r)
+except:
+    print("An exception occured")  # Executed as r is not defined 
+
+# Many exceptions
+try:
+    print(r)
+except NameError:
+    print("Variable r is not defined")   
+except:
+    print("Someting else went wrong")
+
+# use the else keyword to define a block of code to be executed if no errors were raised
+
+try:
+    print("hello")
+except:
+    print("Something went wrong!")
+else:
+    print("Nothing went wrong")
+
+
+# Finally - use regardless of try and except
+try:
+    print(r)
+except:
+    print("Something went wrong")
+finally:
+    print("The try-except is finished")
+
+# Raise an exception
+'''
+x = -1
+if x<0:
+    raise Exception("Sorry, number is below zero")
+
+# Raise a TypeError if x is not an integer
+x = "hell"
+if not type(x) is int:
+    raise TypeError("Only integers are allowed")
+'''
+# The above has been commented as it ends the program
+
+# User Input
+
+username = input("Enter username: ")
+print("Username is: ", username)
+
+# String formatting
+
+# format() method allows you to format selected parts of a string
+queue = 90
+txt = "Number of songs in the queue is {}"
+print(txt.format(queue))
+
+# You can add parameters inside the curly brackets to specify how to convert the value
+price = 55
+txt = "The price of the product is {:.2f} dollars"
+print(txt.format(price))
+
+# Multiple values
+quantity = 3
+itemno = 123
+price = 90
+myorder = "I want {} pieces of item number {} for {:.2f} dollars"
+print(myorder.format(quantity, itemno, price))
+
+# You can use index numbers (a number inside the curly brackets {0}) to be sure the values are placed in the correct placeholders
+quantity = 3
+itemno = 123
+price = 90
+myorder = "I want {0} pieces of item number {1} for {2:.2f} dollars"
+print(myorder.format(quantity, itemno, price))
+
+# if you want to refer to the same value more than once, use the index number
+quantity = 3
+itemno = 123
+price = 90
+myorder = "I want {1} pieces of item number {1} for {2:.2f} dollars"
+print(myorder.format(quantity, itemno, price))
+
+# Named indexes
+myorder = "I have ordered a {carname}, it is a {model}"
+print(myorder.format(carname = "Ford", model = "Mustang"))
