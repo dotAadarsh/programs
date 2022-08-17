@@ -1,4 +1,5 @@
 
+
 # Programming Resources
 
 ##  C
@@ -42,3 +43,7 @@
 - [INTRODUCTION TO ALGORITHMS | MIT](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/)
 - [Learn DS & Algorithms | Programiz](https://www.programiz.com/dsa)
 - [Data Structures and Algorithms | CS Dojo YT playlist](https://youtube.com/playlist?list=PLBZBJbE_rGRV8D7XZ08LK6z-4zPoWzu5H)
+## SQL
+- [SQL  Tutorial | W3Schools](https://www.w3schools.com/sql/default.asp)
+- [# SQL Tutorial - Full Database Course for Beginners| YT](https://youtu.be/HXV3zeQKqGY)
+- [Relational Database (Beta) | Freecodecamp](https://www.freecodecamp.org/learn/relational-database/)
