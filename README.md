@@ -43,7 +43,10 @@
 - [INTRODUCTION TO ALGORITHMS | MIT](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/)
 - [Learn DS & Algorithms | Programiz](https://www.programiz.com/dsa)
 - [Data Structures and Algorithms | CS Dojo YT playlist](https://youtube.com/playlist?list=PLBZBJbE_rGRV8D7XZ08LK6z-4zPoWzu5H)
-
+### Arrays
+- [Array cheatsheet for coding interviews](techinterviewhandbook.org/algorithms/array/)
+- [Array in Data Structure: What is, Arrays Operations \[Examples\]](https://www.guru99.com/array-data-structure.html)
+- [Problems on Arrays](https://practice.geeksforgeeks.org/explore?page=1&category%5B%5D=Arrays&sortBy=submissions)
 --------
 ## SQL
 - [SQL  Tutorial | W3Schools](https://www.w3schools.com/sql/default.asp)
