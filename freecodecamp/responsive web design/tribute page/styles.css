@@ -1,0 +1,21 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #A9A9A9;
+  text-align: center;
+  color: #000000;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+ul {
+  text-align: left;
+}
