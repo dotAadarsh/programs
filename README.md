@@ -1,5 +1,3 @@
-
-
 # Programming Resources
 
 ##  C
@@ -58,3 +56,8 @@
 
 - [Networking_Fundamentals | PDF](https://www.cisco.com/c/dam/global/fi_fi/assets/docs/SMB_University_120307_Networking_Fundamentals.pdf)
 - [Computer Networks | YT Playlist](https://youtube.com/playlist?list=PLBlnK6fEyqRgMCUAG0XRw78UA8qnv6jEx)
+
+----
+## Bash
+- [Bash Scripting Tutorial](https://www.javatpoint.com/bash)
+- [How To Run the .sh File Shell Script In Linux / UNIX](https://www.cyberciti.biz/faq/run-execute-sh-shell-script/)
